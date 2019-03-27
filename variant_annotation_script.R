@@ -1,4 +1,3 @@
-
 #Set your working directory to when you have saved the "Challenge_data.vcf" file
 #Call in library for Variant Annotation
 #Read in the variant data and expand out multiallelic sites
