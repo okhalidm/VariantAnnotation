@@ -1,4 +1,5 @@
 
+#Set your working directory to when you have saved the "Challenge_data.vcf" file
 #Call in library for Variant Annotation
 #Read in the variant data and expand out multiallelic sites
 #Write the expanded set as "Challenge_data2.vcf" which has been provided in this github
@@ -8,17 +9,14 @@ vcf1 <- readVcf("Challenge_data.vcf", "hg19")
 vcf2 <- expand(vcf1)
 writeVcf(vcf2,"Challenge_data2.vcf")
 
-#a <- as.data.frame(vcf2@fixed)
-#b <- as.data.frame(vcf2@info)
-#c <- as.data.frame(vcf2@rowRanges)
-
-#d <- cbind(c,a,b)
+#Read in the expanded VCF file
 
 vcf1 <- readVcf("Challenge_data2.vcf", "hg19")
 
-#obtain the header and genotype information of the vcf file to help in downstream analysis
-head(vcf1)
-geno(vcf1)
+#obtain the header and genotype information of the vcf file to help in downstream analysis. The two lines below have been commented out but may be useful to those who which to look over that information.
+
+#head(vcf1)
+#geno(vcf1)
 
 
 #Identify the different variant types in the expanded VCF file
